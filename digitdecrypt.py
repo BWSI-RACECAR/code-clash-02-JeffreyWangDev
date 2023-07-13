@@ -38,8 +38,6 @@ class Solution:
 def main():
     input1= input()
     input2 = int(input1)
-
-    
     tc1 = Solution()
     ans = tc1.digitdecrypt(input2)
     print(ans)
