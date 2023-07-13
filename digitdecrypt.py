@@ -27,25 +27,13 @@ Input: 13 Output: 4
 Input: 0 Output: 0 
 """
 
-def digitdecrypta(num):
-    #type num: int
-    #return type: int
-    a = 0
-    snum = str(num)
-    for i in range(len(snum)):
-        a += int(snum[i])
-    a=str(a)
-    
-    if len(a) > 1:
-        return digitdecrypta(int(a))
-    return a
 class Solution:    
     def digitdecrypt(self, num):
         #type num: int
         #return type: int
         
         #TODO: Write code below to returnn an int with the solution to the prompt.
-        return digitdecrypta(num)
+        return self.digitdecrypt(sum([int(i) for i in str(num)])) if len(str(sum([int(i) for i in str(num)]))) > 1 else sum([int(i) for i in str(num)])
  
 def main():
     input1= input()
